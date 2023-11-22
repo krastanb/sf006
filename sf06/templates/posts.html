@@ -1,0 +1,13 @@
+{% extends 'default.html' %}
+
+{%block title%}Новости{% endblock %}
+
+{% block content %}
+{% for p in posts %}
+<h1>{{p.header}}</h1>
+<p>{{p.time_create|date:"d.m.Y H:i"}}</p>
+{{p.text|truncatechars:20}}
+
+
+{% endfor %}
+{% endblock content %}
