@@ -32,7 +32,7 @@ class Category(models.Model):
 
 class Post(models.Model):
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
-    choice = models.CharField(max_length = 2, choices=POSITIONS, default=article)
+    type = models.CharField(max_length = 2, choices=POSITIONS, default=article)
     time_create = models.DateTimeField(auto_now_add=True)
     time_update = models.DateTimeField(auto_now=True)
     category = models.ManyToManyField(Category, through='PostCategory')

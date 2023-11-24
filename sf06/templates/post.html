@@ -4,7 +4,10 @@
 {% load custom_filters %}
 {%block title%}{{post.header|truncatewords:3}}{% endblock %}
 
+
+
 {% block content %}
+
 
 <h1>{{post.header}}</h1>
 <p>Автор статьи: {{post.author.user.username}}</p>

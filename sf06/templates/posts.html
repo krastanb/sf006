@@ -1,13 +1,49 @@
 {% extends 'default.html' %}
+{% load custom_tags%}
 
-{%block title%}Новости{% endblock %}
+{%block title%}{{title}}{% endblock %}
+
+{% block navbar %}
+{% if title == "Новости"%}
+<a class="navbar-brand " href="{% url 'news'%}">Новости</a>
+<a class="navbar-brand text-secondary" href="{% url 'articles'%}">Статьи</a>
+{% elif title == "Статьи" %}
+<a class="navbar-brand text-secondary" color="#8BACAC" href="{% url 'news'%}">Новости</a>
+<a class="navbar-brand" href="{% url 'articles'%}">Статьи</a>
+{% endif%}
+{% endblock navbar %}
+
+
 
 {% block content %}
+
+<form action="" method="get">
+    {# Переменная, которую мы передали через контекст, может сгенерировать нам форму с полями #}
+    {{ filterset.form.as_p }}
+    {# Добавим кнопку отправки данных формы #}
+    <input type="submit" value="Найти" />
+</form>
+
 {% for p in posts %}
 <h1>{{p.header}}</h1>
 <p>{{p.time_create|date:"d.m.Y H:i"}}</p>
 {{p.text|truncatechars:20}}
-
-
 {% endfor %}
+<p></p>
+{% if page_obj.has_previous %}
+       <a href="?{% url_replace page=1 %}">1</a>
+       {% if page_obj.previous_page_number != 1 %}
+       {% if page_obj.previous_page_number != 2 %}... {% endif %}
+           <a href="?{% url_replace page=page_obj.previous_page_number %}">{{ page_obj.previous_page_number }}</a>
+       {% endif %}
+   {% endif %}
+   {{ page_obj.number }}
+   {% if page_obj.has_next %}
+
+       <a href="?{% url_replace page=page_obj.next_page_number %}">{{ page_obj.next_page_number }}</a>
+       {% if paginator.num_pages != page_obj.next_page_number %}
+           {% if page_obj.next_page_number|add:1 != page_obj.paginator.num_pages  %}...{% endif%}
+           <a href="?{% url_replace page=page_obj.paginator.num_pages %}">{{ page_obj.paginator.num_pages }}</a>
+           {%endif%}
+    {% endif %}
 {% endblock content %}
