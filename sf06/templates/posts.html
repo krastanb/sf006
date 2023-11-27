@@ -4,10 +4,10 @@
 {%block title%}{{title}}{% endblock %}
 
 {% block navbar %}
-{% if title == "Новости"%}
+{% if '/news' in request.path%}
 <a class="navbar-brand " href="{% url 'news'%}">Новости</a>
 <a class="navbar-brand text-secondary" href="{% url 'articles'%}">Статьи</a>
-{% elif title == "Статьи" %}
+{% elif "/articles" in request.path  %}
 <a class="navbar-brand text-secondary" color="#8BACAC" href="{% url 'news'%}">Новости</a>
 <a class="navbar-brand" href="{% url 'articles'%}">Статьи</a>
 {% endif%}
@@ -16,16 +16,19 @@
 
 
 {% block content %}
-
+{% if request.path == '/news/search'%}
 <form action="" method="get">
     {# Переменная, которую мы передали через контекст, может сгенерировать нам форму с полями #}
     {{ filterset.form.as_p }}
     {# Добавим кнопку отправки данных формы #}
     <input type="submit" value="Найти" />
 </form>
-
+<a href="{% url 'searchnews' %}">Сбросить</a>
+{% elif '/news' in request.path %}
+<a href="{% url 'searchnews' %}">Включить поиск</a>
+{% endif %}
 {% for p in posts %}
-<h1>{{p.header}}</h1>
+<a href="{{ p.get_absolute_url }}"><h1>{{p.header}}</h1></a>
 <p>{{p.time_create|date:"d.m.Y H:i"}}</p>
 {{p.text|truncatechars:20}}
 {% endfor %}
