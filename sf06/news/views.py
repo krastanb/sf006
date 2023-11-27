@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .models import Post
 from .filters import NewsFilter
@@ -57,4 +58,9 @@ class PostEdit(UpdateView):
     form_class = AddPostForm
     model = Post
     template_name = 'postedit.html'
-# Create your views here.
+
+class PostDelete(DeleteView):
+    model = Post
+    template_name = 'postedit.html'
+    def get_success_url(self):
+        return reverse_lazy('news') if 'news' in self.request.path else reverse_lazy('articles')

@@ -8,6 +8,9 @@
     <button type="submit">Добавить</button>
     {% elif 'edit' in request.path%}
     <button type="submit">Сохранить</button>
+    {% elif 'delete' in request.path%}
+    <p>Удаляем {{object.get_type_display}} "{{ object.header }}"?</p>
+    <button type="submit">Удалить</button>
     {% endif %}
 </form>
 {% endblock content %}
