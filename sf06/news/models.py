@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.db.models import Sum
+from django.urls import reverse
 
 
 article = 'AR'
@@ -42,7 +43,10 @@ class Post(models.Model):
     rating = models.IntegerField(default=0)
 
     def get_absolute_url(self):
-        return self.pk
+        if self.type=='NE':
+            return reverse('newsid', args=(self.pk,))
+        else:
+            return reverse('articleid', args=(self.pk,))
 
     def preview(self):
         return f"{self.text[:124]}..."

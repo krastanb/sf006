@@ -3,15 +3,7 @@
 
 {%block title%}{{title}}{% endblock %}
 
-{% block navbar %}
-{% if '/news' in request.path%}
-<a class="navbar-brand " href="{% url 'news'%}">Новости</a>
-<a class="navbar-brand text-secondary" href="{% url 'articles'%}">Статьи</a>
-{% elif "/articles" in request.path  %}
-<a class="navbar-brand text-secondary" color="#8BACAC" href="{% url 'news'%}">Новости</a>
-<a class="navbar-brand" href="{% url 'articles'%}">Статьи</a>
-{% endif%}
-{% endblock navbar %}
+
 
 
 

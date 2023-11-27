@@ -1,7 +1,8 @@
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .models import Post
 from .filters import NewsFilter
+from .forms import AddPostForm
 
 class NewsList(ListView):
     model = Post
@@ -43,5 +44,17 @@ class PostDetail(DetailView):
     template_name = 'post.html'
     context_object_name = 'post'
 
+class PostCreate(CreateView):
+    form_class = AddPostForm
+    model = Post
+    template_name = 'postedit.html'
+    def form_valid(self, form):
+        post = form.save(commit=False)
+        post.type='NE' if 'news' in self.request.path else 'AR'
+        return super().form_valid(form)
 
+class PostEdit(UpdateView):
+    form_class = AddPostForm
+    model = Post
+    template_name = 'postedit.html'
 # Create your views here.

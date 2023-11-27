@@ -1,0 +1,13 @@
+{% extends 'default.html' %}
+
+{% block content %}
+<form action="", method="post">
+    {% csrf_token%} 
+    {{form.as_p}} 
+    {% if 'create' in request.path %}
+    <button type="submit">Добавить</button>
+    {% elif 'edit' in request.path%}
+    <button type="submit">Сохранить</button>
+    {% endif %}
+</form>
+{% endblock content %}
