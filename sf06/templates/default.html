@@ -24,12 +24,21 @@
 {% elif "/article" in request.path  %}
 <a class="navbar-brand text-secondary" color="#8BACAC" href="{% url 'news'%}">Новости</a>
 <a class="navbar-brand" href="{% url 'articles'%}">Статьи</a>
+{% else  %}
+    <a class="navbar-brand " href="{% url 'news'%}">Новости</a>
+    <a class="navbar-brand" href="{% url 'articles'%}">Статьи</a>
 {% endif%}
+
 {% endblock navbar %}
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
+
                     </ul>
+
                 </div>
+
+            <a class="navbar-brand" href="{% url 'signup'%}">Регистрация</a>
+
             </div>
          </nav>
         <!-- Page content-->

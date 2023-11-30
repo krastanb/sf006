@@ -11,6 +11,7 @@ POSITIONS = [
     (news, 'Новость')
 ]
 
+
 class Author(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     rating = models.IntegerField(default=0)
@@ -24,6 +25,7 @@ class Author(models.Model):
 
     def __str__(self):
         return self.user.username
+
 
 class Category(models.Model):
     category_name = models.CharField(max_length=255, unique=True)
@@ -66,7 +68,7 @@ class Post(models.Model):
 class PostCategory(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
-    
+
 class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
