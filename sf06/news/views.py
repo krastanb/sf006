@@ -4,6 +4,7 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from .models import Post
 from .filters import NewsFilter
 from .forms import AddPostForm
+from django.contrib.auth.mixins import PermissionRequiredMixin
 
 class NewsList(ListView):
     model = Post
@@ -45,8 +46,9 @@ class PostDetail(DetailView):
     template_name = 'post.html'
     context_object_name = 'post'
 
-class PostCreate(CreateView):
+class PostCreate(PermissionRequiredMixin, CreateView):
     form_class = AddPostForm
+    permission_required = ('news.add_post')
     model = Post
     template_name = 'postedit.html'
     def form_valid(self, form):
@@ -54,13 +56,15 @@ class PostCreate(CreateView):
         post.type='NE' if 'news' in self.request.path else 'AR'
         return super().form_valid(form)
 
-class PostEdit(UpdateView):
+class PostEdit(PermissionRequiredMixin, UpdateView):
     form_class = AddPostForm
+    permission_required = ('news.change_post')
     model = Post
     template_name = 'postedit.html'
 
-class PostDelete(DeleteView):
+class PostDelete(PermissionRequiredMixin, DeleteView):
     model = Post
+    permission_required = ('news.delete_post')
     template_name = 'postedit.html'
     def get_success_url(self):
         return reverse_lazy('news') if 'news' in self.request.path else reverse_lazy('articles')

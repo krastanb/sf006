@@ -15,11 +15,15 @@
     {# Добавим кнопку отправки данных формы #}
     <input type="submit" value="Найти" />
 </form>
+
 <a href="{% url 'searchnews' %}">Сбросить</a>
+
 {% elif '/news' in request.path %}
 <p><a href="{% url 'searchnews' %}">Включить поиск</a></P>
 {% endif %}
+{% if perms.news.add_post %}
 <a href="{{request.path}}/create">Создать</a>
+{% endif %}
 {% for p in posts %}
 <a href="{{ p.get_absolute_url }}"><h1>{{p.header}}</h1></a>
 <p>{{p.time_create|date:"d.m.Y H:i"}}</p>

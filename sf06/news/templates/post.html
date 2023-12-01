@@ -13,9 +13,10 @@
 <p>Автор статьи: {{post.author.user.username}}</p>
 <p>Дата: {{post.time_create|date:"d.m.Y"}}</p>
 <p>{{post.text|censor}}</p>
+{% if perms.news.change_post and perms.news.delete_post %}
 <a href="{{request.path}}/edit">Изменить</a>
 <a href="{{request.path}}/delete"> Удалить</a>
-
+{% endif %}
 
 
 {% endblock content %}
