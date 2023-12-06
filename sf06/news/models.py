@@ -83,3 +83,10 @@ class Comment(models.Model):
     def dislike(self):
         self.rating-=1
         self.save()
+
+class Subscription(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"{self.user.username} - {self.category.category_name}"

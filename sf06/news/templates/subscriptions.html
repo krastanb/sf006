@@ -1,0 +1,31 @@
+
+
+{% extends 'default.html' %}
+
+{%block title%}Подписки
+{% endblock %}
+
+
+
+{% block content %}
+<form method="post">
+    {% for cat in cats %}
+        <p>{{ cat.category_name }}</p>
+        <form method="post">
+            {% csrf_token %}
+            <input  type="hidden" name="category_id" value="{{ cat.id }}" />
+            {% if cat.user_is_subs %}
+                <button disabled>Подписаться</button>
+                <button name="action" value="unsubscribe">Отписаться</button>
+            {% else %}
+                <button name="action" value="subscribe">Подписаться</button>
+                <button disabled>Отписаться</button>
+            {% endif %}
+        </form>
+    {% endfor %}
+</form>
+
+
+
+
+{% endblock content %}
