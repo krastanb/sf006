@@ -8,6 +8,7 @@ from django.contrib.auth.mixins import PermissionRequiredMixin
 from .models import Post, Category, Subscription
 from .filters import NewsFilter
 from .forms import AddPostForm
+from .tasks import hello
 
 
 class NewsList(ListView):
@@ -17,10 +18,13 @@ class NewsList(ListView):
     context_object_name = 'posts'
     paginate_by = 2
 
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['title'] = 'Новости'
         context['filterset'] = self.filterset
+        hello.apply_async()
+        print('rdy')
         return context
     
     def get_queryset(self):
