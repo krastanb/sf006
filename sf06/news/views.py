@@ -23,7 +23,6 @@ class NewsList(ListView):
         context = super().get_context_data(**kwargs)
         context['title'] = 'Новости'
         context['filterset'] = self.filterset
-        hello.apply_async()
         print('rdy')
         return context
     
