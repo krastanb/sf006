@@ -8,14 +8,15 @@ from django.contrib.auth.mixins import PermissionRequiredMixin
 from .models import Post, Category, Subscription
 from .filters import NewsFilter
 from .forms import AddPostForm
-from .tasks import hello
-
+from django.conf import settings
+import logging
 
 class NewsList(ListView):
     model = Post
     ordering = '-time_create'
     template_name = 'posts.html'
     context_object_name = 'posts'
+
     paginate_by = 2
 
 
@@ -23,7 +24,6 @@ class NewsList(ListView):
         context = super().get_context_data(**kwargs)
         context['title'] = 'Новости'
         context['filterset'] = self.filterset
-        print('rdy')
         return context
     
     def get_queryset(self):
@@ -79,6 +79,7 @@ class PostDelete(PermissionRequiredMixin, DeleteView):
 @login_required
 @csrf_protect
 def subscriptions(request):
+
     if request.method == 'POST':
         cat_id = request.POST.get('category_id')
         category = Category.objects.get(id=cat_id)

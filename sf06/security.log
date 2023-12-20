@@ -1,0 +1,10 @@
+2023-12-20 17:15:25,960 DEBUG views TEST выходит дебаг security!!
+2023-12-20 17:15:25,961 INFO views TEST выходит »Ќ‘о security!!
+2023-12-20 17:15:25,961 WARNING views test, выходит варнинг жестко security!!
+2023-12-20 17:15:25,962 ERROR views TEST выходит еррор сильно security!!
+2023-12-20 17:15:25,962 CRITICAL views TEST выходит критикал конкретно security!!
+2023-12-20 17:15:27,276 DEBUG views TEST выходит дебаг security!!
+2023-12-20 17:15:27,276 INFO views TEST выходит »Ќ‘о security!!
+2023-12-20 17:15:27,276 WARNING views test, выходит варнинг жестко security!!
+2023-12-20 17:15:27,276 ERROR views TEST выходит еррор сильно security!!
+2023-12-20 17:15:27,276 CRITICAL views TEST выходит критикал конкретно security!!

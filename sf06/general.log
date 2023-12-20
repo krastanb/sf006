@@ -1,0 +1,174 @@
+2023-12-20 16:34:20,175 INFO autoreload Watching for file changes with StatReloader info_FILE
+2023-12-20 16:34:27,396 INFO views TEST выходит ИНФо info_FILE
+2023-12-20 16:34:27,396 WARNING views test, выходит варнинг жестко info_FILE
+2023-12-20 16:34:27,396 ERROR views TEST выходит еррор сильно info_FILE
+2023-12-20 16:34:27,396 CRITICAL views TEST выходит критикал конкретно info_FILE
+2023-12-20 16:34:27,426 INFO basehttp "GET /news HTTP/1.1" 200 1771 info_FILE
+2023-12-20 16:35:04,806 INFO basehttp "GET /news/25 HTTP/1.1" 200 1578 info_FILE
+2023-12-20 16:35:06,432 INFO views TEST выходит ИНФо info_FILE
+2023-12-20 16:35:06,432 WARNING views test, выходит варнинг жестко info_FILE
+2023-12-20 16:35:06,433 ERROR views TEST выходит еррор сильно info_FILE
+2023-12-20 16:35:06,433 CRITICAL views TEST выходит критикал конкретно info_FILE
+2023-12-20 16:35:06,438 INFO basehttp "GET /news HTTP/1.1" 200 1771 info_FILE
+2023-12-20 16:35:08,965 INFO basehttp "GET /news/25 HTTP/1.1" 200 1578 info_FILE
+2023-12-20 16:35:09,732 INFO views TEST выходит ИНФо info_FILE
+2023-12-20 16:35:09,732 WARNING views test, выходит варнинг жестко info_FILE
+2023-12-20 16:35:09,732 ERROR views TEST выходит еррор сильно info_FILE
+2023-12-20 16:35:09,733 CRITICAL views TEST выходит критикал конкретно info_FILE
+2023-12-20 16:35:09,736 INFO basehttp "GET /news HTTP/1.1" 200 1771 info_FILE
+2023-12-20 16:42:41,716 INFO autoreload Watching for file changes with StatReloader info_FILE
+2023-12-20 16:42:59,286 INFO autoreload C:\Users\N1\Desktop\sf06\sf06\news\views.py changed, reloading. info_FILE
+2023-12-20 16:43:00,031 INFO autoreload Watching for file changes with StatReloader info_FILE
+2023-12-20 16:43:07,056 ERROR views TEST выходит еррор сильно info_FILE
+2023-12-20 16:43:07,056 CRITICAL views TEST выходит критикал конкретно info_FILE
+2023-12-20 16:44:00,459 ERROR views TEST выходит еррор сильно info_FILE
+2023-12-20 16:44:00,459 CRITICAL views TEST выходит критикал конкретно info_FILE
+2023-12-20 16:44:29,096 ERROR views TEST выходит еррор сильно info_FILE
+2023-12-20 16:44:29,096 CRITICAL views TEST выходит критикал конкретно info_FILE
+2023-12-20 16:45:26,619 ERROR views TEST выходит еррор сильно info_FILE
+2023-12-20 16:45:26,626 CRITICAL views TEST выходит критикал конкретно info_FILE
+2023-12-20 16:46:15,046 ERROR views TEST выходит еррор сильно info_FILE
+2023-12-20 16:46:15,046 CRITICAL views TEST выходит критикал конкретно info_FILE
+2023-12-20 16:46:33,716 INFO autoreload C:\Users\N1\Desktop\sf06\sf06\news\views.py changed, reloading. info_FILE
+2023-12-20 16:46:34,509 INFO autoreload Watching for file changes with StatReloader info_FILE
+2023-12-20 16:46:37,461 ERROR views TEST выходит еррор сильно info_FILE
+2023-12-20 16:46:37,461 CRITICAL views TEST выходит критикал конкретно info_FILE
+2023-12-20 16:46:39,376 ERROR views TEST выходит еррор сильно info_FILE
+2023-12-20 16:46:39,376 CRITICAL views TEST выходит критикал конкретно info_FILE
+2023-12-20 16:49:11,586 ERROR views TEST выходит еррор сильно info_FILE
+2023-12-20 16:49:11,596 CRITICAL views TEST выходит критикал конкретно info_FILE
+2023-12-20 16:51:48,676 INFO autoreload C:\Users\N1\Desktop\sf06\sf06\sf06\settings.py changed, reloading. info_FILE
+2023-12-20 16:53:02,366 INFO autoreload Watching for file changes with StatReloader info_FILE
+2023-12-20 16:53:06,256 ERROR views TEST выходит еррор сильно info_FILE
+2023-12-20 16:53:06,256 CRITICAL views TEST выходит критикал конкретно info_FILE
+2023-12-20 16:53:49,846 ERROR views TEST выходит еррор сильно info_FILE
+2023-12-20 16:53:49,846 CRITICAL views TEST выходит критикал конкретно info_FILE
+2023-12-20 16:54:54,496 INFO autoreload C:\Users\N1\Desktop\sf06\sf06\news\views.py changed, reloading. info_FILE
+2023-12-20 16:54:55,168 INFO autoreload Watching for file changes with StatReloader info_FILE
+2023-12-20 16:55:03,233 ERROR views TEST выходит еррор сильно info_FILE
+2023-12-20 16:55:03,234 CRITICAL views TEST выходит критикал конкретно info_FILE
+2023-12-20 16:55:04,746 ERROR views TEST выходит еррор сильно info_FILE
+2023-12-20 16:55:04,746 CRITICAL views TEST выходит критикал конкретно info_FILE
+2023-12-20 17:00:59,616 INFO autoreload C:\Users\N1\Desktop\sf06\sf06\sf06\settings.py changed, reloading. info_FILE
+2023-12-20 17:01:00,458 INFO autoreload Watching for file changes with StatReloader info_FILE
+2023-12-20 17:01:02,764 WARNING views test, выходит варнинг жестко info_FILE
+2023-12-20 17:01:02,765 ERROR views TEST выходит еррор сильно info_FILE
+2023-12-20 17:01:02,765 CRITICAL views TEST выходит критикал конкретно info_FILE
+2023-12-20 17:01:05,535 WARNING views test, выходит варнинг жестко info_FILE
+2023-12-20 17:01:05,535 ERROR views TEST выходит еррор сильно info_FILE
+2023-12-20 17:01:05,535 CRITICAL views TEST выходит критикал конкретно info_FILE
+2023-12-20 17:06:14,716 INFO autoreload C:\Users\N1\Desktop\sf06\sf06\sf06\settings.py changed, reloading. info_FILE
+2023-12-20 17:07:07,891 INFO autoreload Watching for file changes with StatReloader info_FILE
+2023-12-20 17:07:10,377 WARNING views test, выходит варнинг жестко info_FILE
+2023-12-20 17:07:10,378 ERROR views TEST выходит еррор сильно info_FILE
+2023-12-20 17:07:10,379 CRITICAL views TEST выходит критикал конкретно info_FILE
+2023-12-20 17:07:10,462 WARNING log Not Found: /favicon.ico info_FILE
+2023-12-20 17:07:14,170 WARNING views test, выходит варнинг жестко info_FILE
+2023-12-20 17:07:14,170 ERROR views TEST выходит еррор сильно info_FILE
+2023-12-20 17:07:14,171 CRITICAL views TEST выходит критикал конкретно info_FILE
+2023-12-20 17:07:52,731 WARNING views test, выходит варнинг жестко info_FILE
+2023-12-20 17:07:52,731 ERROR views TEST выходит еррор сильно info_FILE
+2023-12-20 17:07:52,731 CRITICAL views TEST выходит критикал конкретно info_FILE
+2023-12-20 17:08:56,656 INFO autoreload C:\Users\N1\Desktop\sf06\sf06\sf06\settings.py changed, reloading. info_FILE
+2023-12-20 17:08:57,366 INFO autoreload Watching for file changes with StatReloader info_FILE
+2023-12-20 17:09:00,277 WARNING views test, выходит варнинг жестко info_FILE
+2023-12-20 17:09:00,277 ERROR views TEST выходит еррор сильно info_FILE
+2023-12-20 17:09:00,277 CRITICAL views TEST выходит критикал конкретно info_FILE
+2023-12-20 17:09:00,381 WARNING log Not Found: /favicon.ico info_FILE
+2023-12-20 17:09:40,041 INFO autoreload C:\Users\N1\Desktop\sf06\sf06\sf06\settings.py changed, reloading. info_FILE
+2023-12-20 17:09:40,706 INFO autoreload Watching for file changes with StatReloader info_FILE
+2023-12-20 17:09:42,006 WARNING views test, выходит варнинг жестко info_FILE
+2023-12-20 17:09:42,026 ERROR views TEST выходит еррор сильно info_FILE
+2023-12-20 17:09:42,036 CRITICAL views TEST выходит критикал конкретно info_FILE
+2023-12-20 17:09:44,071 WARNING views test, выходит варнинг жестко info_FILE
+2023-12-20 17:09:44,086 ERROR views TEST выходит еррор сильно info_FILE
+2023-12-20 17:09:44,101 CRITICAL views TEST выходит критикал конкретно info_FILE
+2023-12-20 17:09:47,656 INFO autoreload C:\Users\N1\Desktop\sf06\sf06\sf06\settings.py changed, reloading. info_FILE
+2023-12-20 17:09:48,350 INFO autoreload Watching for file changes with StatReloader info_FILE
+2023-12-20 17:10:05,646 INFO autoreload C:\Users\N1\Desktop\sf06\sf06\sf06\settings.py changed, reloading. info_FILE
+2023-12-20 17:10:06,306 INFO autoreload Watching for file changes with StatReloader info_FILE
+2023-12-20 17:10:07,156 WARNING views test, выходит варнинг жестко info_FILE
+2023-12-20 17:10:07,166 ERROR views TEST выходит еррор сильно info_FILE
+2023-12-20 17:10:07,166 CRITICAL views TEST выходит критикал конкретно info_FILE
+2023-12-20 17:10:19,556 INFO autoreload C:\Users\N1\Desktop\sf06\sf06\sf06\settings.py changed, reloading. info_FILE
+2023-12-20 17:10:20,346 INFO autoreload Watching for file changes with StatReloader info_FILE
+2023-12-20 17:10:20,576 WARNING views test, выходит варнинг жестко info_FILE
+2023-12-20 17:10:20,576 ERROR views TEST выходит еррор сильно info_FILE
+2023-12-20 17:10:20,576 CRITICAL views TEST выходит критикал конкретно info_FILE
+2023-12-20 17:10:22,076 WARNING views test, выходит варнинг жестко info_FILE
+2023-12-20 17:10:22,076 ERROR views TEST выходит еррор сильно info_FILE
+2023-12-20 17:10:22,076 CRITICAL views TEST выходит критикал конкретно info_FILE
+2023-12-20 17:10:41,937 INFO autoreload C:\Users\N1\Desktop\sf06\sf06\sf06\settings.py changed, reloading. info_FILE
+2023-12-20 17:10:42,606 INFO autoreload Watching for file changes with StatReloader info_FILE
+2023-12-20 17:10:43,787 WARNING views test, выходит варнинг жестко info_FILE
+2023-12-20 17:10:43,787 ERROR views TEST выходит еррор сильно info_FILE
+2023-12-20 17:10:43,787 CRITICAL views TEST выходит критикал конкретно info_FILE
+2023-12-20 17:11:21,126 WARNING views test, выходит варнинг жестко info_FILE
+2023-12-20 17:11:21,126 ERROR views TEST выходит еррор сильно info_FILE
+2023-12-20 17:11:21,126 CRITICAL views TEST выходит критикал конкретно info_FILE
+2023-12-20 17:11:22,447 WARNING views test, выходит варнинг жестко info_FILE
+2023-12-20 17:11:22,447 ERROR views TEST выходит еррор сильно info_FILE
+2023-12-20 17:11:22,447 CRITICAL views TEST выходит критикал конкретно info_FILE
+2023-12-20 17:11:25,376 WARNING views test, выходит варнинг жестко info_FILE
+2023-12-20 17:11:25,376 ERROR views TEST выходит еррор сильно info_FILE
+2023-12-20 17:11:25,376 CRITICAL views TEST выходит критикал конкретно info_FILE
+2023-12-20 17:11:35,476 INFO autoreload C:\Users\N1\Desktop\sf06\sf06\sf06\settings.py changed, reloading. info_FILE
+2023-12-20 17:11:36,086 INFO autoreload Watching for file changes with StatReloader info_FILE
+2023-12-20 17:11:37,316 WARNING views test, выходит варнинг жестко info_FILE
+2023-12-20 17:11:37,316 ERROR views TEST выходит еррор сильно info_FILE
+2023-12-20 17:11:37,316 CRITICAL views TEST выходит критикал конкретно info_FILE
+2023-12-20 17:11:49,236 INFO autoreload C:\Users\N1\Desktop\sf06\sf06\sf06\settings.py changed, reloading. info_FILE
+2023-12-20 17:11:49,956 INFO autoreload Watching for file changes with StatReloader info_FILE
+2023-12-20 17:11:51,467 WARNING views test, выходит варнинг жестко info_FILE
+2023-12-20 17:11:51,467 ERROR views TEST выходит еррор сильно info_FILE
+2023-12-20 17:11:51,467 CRITICAL views TEST выходит критикал конкретно info_FILE
+2023-12-20 17:11:53,067 WARNING views test, выходит варнинг жестко info_FILE
+2023-12-20 17:11:53,067 ERROR views TEST выходит еррор сильно info_FILE
+2023-12-20 17:11:53,067 CRITICAL views TEST выходит критикал конкретно info_FILE
+2023-12-20 17:12:17,981 INFO autoreload C:\Users\N1\Desktop\sf06\sf06\sf06\settings.py changed, reloading. info_FILE
+2023-12-20 17:12:18,666 INFO autoreload Watching for file changes with StatReloader info_FILE
+2023-12-20 17:12:18,951 ERROR views TEST выходит еррор сильно info_FILE
+2023-12-20 17:12:18,951 CRITICAL views TEST выходит критикал конкретно info_FILE
+2023-12-20 17:12:21,237 ERROR views TEST выходит еррор сильно info_FILE
+2023-12-20 17:12:21,237 CRITICAL views TEST выходит критикал конкретно info_FILE
+2023-12-20 17:12:30,056 INFO autoreload C:\Users\N1\Desktop\sf06\sf06\sf06\settings.py changed, reloading. info_FILE
+2023-12-20 17:12:30,716 INFO autoreload Watching for file changes with StatReloader info_FILE
+2023-12-20 17:12:31,996 CRITICAL views TEST выходит критикал конкретно info_FILE
+2023-12-20 17:12:33,146 CRITICAL views TEST выходит критикал конкретно info_FILE
+2023-12-20 17:12:39,875 INFO autoreload C:\Users\N1\Desktop\sf06\sf06\sf06\settings.py changed, reloading. info_FILE
+2023-12-20 17:12:40,637 INFO autoreload Watching for file changes with StatReloader info_FILE
+2023-12-20 17:12:59,272 INFO autoreload C:\Users\N1\Desktop\sf06\sf06\sf06\settings.py changed, reloading. info_FILE
+2023-12-20 17:15:08,436 INFO autoreload Watching for file changes with StatReloader info_FILE
+2023-12-20 17:15:12,537 ERROR views TEST выходит еррор сильно info_FILE
+2023-12-20 17:15:12,538 CRITICAL views TEST выходит критикал конкретно info_FILE
+2023-12-20 17:15:22,107 INFO autoreload C:\Users\N1\Desktop\sf06\sf06\news\views.py changed, reloading. info_FILE
+2023-12-20 17:15:22,794 INFO autoreload Watching for file changes with StatReloader info_FILE
+2023-12-20 17:15:25,961 INFO views TEST выходит ИНФо info_FILE
+2023-12-20 17:15:25,961 WARNING views test, выходит варнинг жестко info_FILE
+2023-12-20 17:15:25,962 ERROR views TEST выходит еррор сильно info_FILE
+2023-12-20 17:15:25,962 CRITICAL views TEST выходит критикал конкретно info_FILE
+2023-12-20 17:15:27,276 INFO views TEST выходит ИНФо info_FILE
+2023-12-20 17:15:27,276 WARNING views test, выходит варнинг жестко info_FILE
+2023-12-20 17:15:27,276 ERROR views TEST выходит еррор сильно info_FILE
+2023-12-20 17:15:27,276 CRITICAL views TEST выходит критикал конкретно info_FILE
+2023-12-20 17:17:37,047 INFO autoreload C:\Users\N1\Desktop\sf06\sf06\sf06\settings.py changed, reloading. info_FILE
+2023-12-20 17:17:37,716 INFO autoreload Watching for file changes with StatReloader info_FILE
+2023-12-20 17:33:11,927 INFO autoreload Watching for file changes with StatReloader
+2023-12-20 17:33:17,067 ERROR views TEST выходит еррор сильно
+2023-12-20 17:33:17,087 CRITICAL views TEST выходит критикал конкретно
+2023-12-20 17:33:36,987 INFO autoreload C:\Users\N1\Desktop\sf06\sf06\sf06\settings.py changed, reloading.
+2023-12-20 17:33:37,637 INFO autoreload Watching for file changes with StatReloader
+2023-12-20 17:33:38,117 ERROR views TEST выходит еррор сильно
+2023-12-20 17:33:38,130 CRITICAL views TEST выходит критикал конкретно
+2023-12-20 17:33:42,647 ERROR views TEST выходит еррор сильно
+2023-12-20 17:33:42,657 CRITICAL views TEST выходит критикал конкретно
+2023-12-20 17:34:21,119 INFO autoreload C:\Users\N1\Desktop\sf06\sf06\news\views.py changed, reloading.
+2023-12-20 17:34:21,847 INFO autoreload Watching for file changes with StatReloader
+2023-12-20 17:34:23,857 ERROR views TEST выходит еррор сильно
+2023-12-20 17:35:51,583 INFO autoreload C:\Users\N1\Desktop\sf06\sf06\sf06\settings.py changed, reloading.
+2023-12-20 17:35:52,259 INFO autoreload Watching for file changes with StatReloader
+2023-12-20 17:36:23,248 INFO autoreload C:\Users\N1\Desktop\sf06\sf06\sf06\settings.py changed, reloading.
+2023-12-20 17:36:28,777 INFO autoreload Watching for file changes with StatReloader
+2023-12-20 17:36:51,327 INFO autoreload C:\Users\N1\Desktop\sf06\sf06\sf06\settings.py changed, reloading.
+2023-12-20 17:36:51,973 INFO autoreload Watching for file changes with StatReloader
+2023-12-20 17:37:04,017 INFO autoreload C:\Users\N1\Desktop\sf06\sf06\sf06\settings.py changed, reloading.

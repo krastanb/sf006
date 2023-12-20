@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import logging
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -147,6 +148,117 @@ AUTHENTICATION_BACKENDS = [
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'style' : '{',
+    'formatters': {
+        'debug_info_formatter': {
+            'format': '%(asctime)s %(levelname)s %(message)s'
+        },
+        'warning_formatter':{
+            'format': '%(pathname)s %(asctime)s %(levelname)s %(message)s'
+        },
+        'error_critical_formatter':{
+            'format': '%(asctime)s %(levelname)s %(message)s %(pathname)s %(exc_info)s'
+        },
+        'info_file_formatter': {
+            'format': '%(asctime)s %(levelname)s %(module)s %(message)s'
+        },
+    },
+    'filters': {
+        'require_debug_true': {
+            '()': 'django.utils.log.RequireDebugTrue',
+        },
+        'require_debug_false':{
+            '()':'django.utils.log.RequireDebugFalse'
+        }
+    },
+    'handlers': {
+        # сначала 3 хендлера которые будут обрабатывать консоль
+        'debug_handler': {
+            'level': 'DEBUG',
+            'filters': ['require_debug_true'],
+            'class': 'logging.StreamHandler',
+            'formatter': 'debug_info_formatter'
+        },
+        'warning_handler':{
+            'level':'WARNING',
+            'filters': ['require_debug_true'],
+            'class': 'logging.StreamHandler',
+            'formatter':'warning_formatter'
+        },
+        'error_handler':{
+            'level':'ERROR',
+            'filters': ['require_debug_true'],
+            'class': 'logging.StreamHandler',
+            'formatter': 'error_critical_formatter'
+        },
+        # хендлер для обработки в файл general.log INFO и выше
+        'info_file_handler':{
+            'level':'INFO',
+            'filters': ['require_debug_false'],
+            'class': 'logging.FileHandler',
+            'formatter': 'info_file_formatter',
+            'filename': 'general.log'
+        },
+        # хендлер для обработки в файл errors.log ERROR и выше
+        'error_file_handler':{
+            'level': 'ERROR',
+            'class': 'logging.FileHandler',
+            'formatter': 'error_critical_formatter',
+            'filename': 'errors.log'
+        },
+        # хендлер секьюрити
+        'security_file_handler':{
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'formatter': 'info_file_formatter',
+            'filename': 'security.log'
+        },
+        # на почту
+        'error_to_email':{
+            'level': 'ERROR',
+            'filters': ['require_debug_false'],
+            'class': 'django.utils.log.AdminEmailHandler',
+            'formatter': 'warning_formatter',
+        }
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['debug_handler', 'warning_handler', 'error_handler', 'info_file_handler'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+        'django.request':{
+            'handlers': ['error_file_handler', 'error_to_email'],
+            'level': 'ERROR',
+            'propagate': True,
+        },
+        'django.server': {
+            'handlers': ['error_file_handler', 'error_to_email'],
+            'level': 'ERROR',
+            'propagate': True,
+        },
+        'django.template': {
+            'handlers': ['error_file_handler'],
+            'level': 'ERROR',
+            'propagate': True,
+        },
+        'django.db.backends': {
+            'handlers': ['error_file_handler'],
+            'level': 'ERROR',
+            'propagate': True,
+        },
+        'django.security': {
+            'handlers': ['security_file_handler'],
+            'level': 'DEBUG',
+            'propagate': True,
+        }
+    }
+}
+
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_USERNAME_REQUIRED = False
@@ -169,3 +281,4 @@ CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_ACKS_LATE = True
+
