@@ -4,7 +4,7 @@ from datetime import datetime
 from django.conf import settings
 from django.core.mail import EmailMultiAlternatives
 from .models import Subscription, User, Post
-from datetime import datetime, timedelta, time, timezone
+from datetime import datetime, timedelta, timezone
 from django.template.loader import render_to_string
 
 
@@ -33,25 +33,6 @@ def subsribed_mail_send_task(instancepk):
 
 @shared_task
 def every_week_mails():
-    week_ago = datetime.combine(datetime.today() - timedelta(days=7), time.min).replace(tzinfo=timezone.utc)
-    now = datetime.combine(datetime.today() - timedelta(days=1), time.max).replace(tzinfo=timezone.utc)
-    posts = Post.objects.filter(time_create__gte=week_ago, time_create__lte=now)
-    categories = set(Post.objects.filter(time_create__gte=week_ago, time_create__lte=now).values_list('category__pk', flat=True))
-    subscribers = User.objects.filter(subscription__category__in = categories).distinct().values_list('email', flat=True)
-    print(subscribers)
-    html_context = render_to_string(
-        'weeklyposts.html',
-        {
-            'link':settings.SITE_URL,
-            'posts':posts,
-        }
-    )
-    msg = EmailMultiAlternatives(
-        subject='Статьи за неделю',
-        body='',
-        from_email=settings.EMAIL_HOST_USER,
-        to=subscribers
-    )
-    msg.attach_alternative(html_context, 'text/html')
-    msg.send()
-    pass
+    print('процесс запущен')
+    time.sleep(5)
+    print('процесс окончен')

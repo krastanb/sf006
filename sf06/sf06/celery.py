@@ -12,6 +12,6 @@ app.autodiscover_tasks()
 app.conf.beat_schedule = {
     'weekly_subs': {
         'task': 'news.tasks.every_week_mails', # название таска
-        'schedule': crontab(hour=8, minute=0, day_of_week='monday'), # период в секундах
+        'schedule': crontab(), # период в секундах
     },
 }
