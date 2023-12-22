@@ -1,5 +1,6 @@
 from django.contrib.auth.decorators import login_required
 from django.db.models import Exists, OuterRef
+from django.http import HttpResponse
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.decorators.csrf import csrf_protect
@@ -8,8 +9,7 @@ from django.contrib.auth.mixins import PermissionRequiredMixin
 from .models import Post, Category, Subscription
 from .filters import NewsFilter
 from .forms import AddPostForm
-from django.conf import settings
-import logging
+from django.utils.translation import gettext as _
 
 class NewsList(ListView):
     model = Post
@@ -90,3 +90,7 @@ def subscriptions(request):
             Subscription.objects.filter(user=request.user, category=category).delete()
     categories = Category.objects.annotate(user_is_subs=Exists(Subscription.objects.filter(user=request.user, category=OuterRef('pk'))))
     return render(request, 'subscriptions.html', {'cats':categories})
+
+def test(request):
+    string = _('hello')
+    return render(request, 'test.html', {'string':string})

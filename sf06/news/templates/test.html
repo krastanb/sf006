@@ -1,0 +1,8 @@
+{% extends 'default.html' %}
+{% load i18n %}
+
+{% block content %}
+
+    {{ string }} <!-- Это уже знакомая нам переменная, просто засунули её в шаблон -->
+    {% trans "Check out my new cool translation" %}! <!-- Переводим строку -->
+{% endblock content %}

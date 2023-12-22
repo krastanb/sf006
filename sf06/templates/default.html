@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,15 +19,17 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
             <div class="container">
                 {% block navbar %}
+                {% trans "News" as news%}
+                {% trans "Articles" as articles %}
 {% if '/news' in request.path%}
-<a class="navbar-brand " href="{% url 'news'%}">Новости</a>
-<a class="navbar-brand text-secondary" href="{% url 'articles'%}">Статьи</a>
+<a class="navbar-brand " href="{% url 'news'%}">{{news}}</a>
+<a class="navbar-brand text-secondary" href="{% url 'articles'%}">{{articles}}</a>
 {% elif "/article" in request.path  %}
-<a class="navbar-brand text-secondary" color="#8BACAC" href="{% url 'news'%}">Новости</a>
-<a class="navbar-brand" href="{% url 'articles'%}">Статьи</a>
+<a class="navbar-brand text-secondary" color="#8BACAC" href="{% url 'news'%}">{{news}}</a>
+<a class="navbar-brand" href="{% url 'articles'%}">{{ articles }}</a>
 {% else  %}
-    <a class="navbar-brand " href="{% url 'news'%}">Новости</a>
-    <a class="navbar-brand" href="{% url 'articles'%}">Статьи</a>
+    <a class="navbar-brand " href="{% url 'news'%}">{{news}}</a>
+    <a class="navbar-brand" href="{% url 'articles'%}">{{articles}}</a>
 {% endif%}
 
 {% endblock navbar %}

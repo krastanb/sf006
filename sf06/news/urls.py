@@ -17,5 +17,6 @@ urlpatterns = [
     path('articles/<int:pk>/delete', PostDelete.as_view(), name='articledelete'),
 
     path('subscriptions', subscriptions, name='subscriptions'),
+    path('test', test, name='test')
     
 ]
