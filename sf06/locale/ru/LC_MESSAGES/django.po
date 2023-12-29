@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-22 15:50+0500\n"
+"POT-Creation-Date: 2023-12-26 14:47+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,13 +20,9 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: .\news\templates\test.html:7
-msgid "Check out my new cool translation"
-msgstr "Проверка перевода"
-
-#: .\news\views.py:95
+#: .\news\views.py:96
 msgid "hello"
-msgstr "Дарова епт"
+msgstr "Ну дарова"
 
 #: .\templates\default.html:22
 msgid "News"
@@ -35,3 +31,6 @@ msgstr "Новости"
 #: .\templates\default.html:23
 msgid "Articles"
 msgstr "Статьи"
+
+#~ msgid "Check out my new cool translation"
+#~ msgstr "Проверка перевода"

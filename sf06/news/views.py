@@ -11,6 +11,7 @@ from .filters import NewsFilter
 from .forms import AddPostForm
 from django.utils.translation import gettext as _
 
+
 class NewsList(ListView):
     model = Post
     ordering = '-time_create'

@@ -1,4 +1,4 @@
-from django.urls import path 
+from django.urls import path, include
 
 from .views import * 
 
@@ -17,6 +17,6 @@ urlpatterns = [
     path('articles/<int:pk>/delete', PostDelete.as_view(), name='articledelete'),
 
     path('subscriptions', subscriptions, name='subscriptions'),
-    path('test', test, name='test')
-    
+    path('test', test, name='test'),
+
 ]

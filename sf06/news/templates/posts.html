@@ -8,7 +8,7 @@
 
 
 {% block content %}
-{% if request.path == '/news/search'%}
+{% if request.path == '/ru/news/search'%}
 <form action="" method="get">
     {# Переменная, которую мы передали через контекст, может сгенерировать нам форму с полями #}
     {{ filterset.form.as_p }}
